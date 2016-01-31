@@ -4,6 +4,8 @@ use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
 
 class Post extends Model {
+    
+    protected $fillable = ['slug', 'title', 'excerpt', 'content', 'published', 'published_at'];
 
 	   // public function getPublishedPosts()
     // {

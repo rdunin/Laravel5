@@ -145,7 +145,10 @@ return [
 		'App\Providers\EventServiceProvider',
 		'App\Providers\RouteServiceProvider',
 		
+		'Frozennode\Administrator\AdministratorServiceProvider',
+		
 		'Collective\Html\HtmlServiceProvider',
+		'Barryvdh\Debugbar\ServiceProvider',
 
 	],
 
@@ -197,6 +200,7 @@ return [
 		
 		'Form' => 'Collective\Html\FormFacade',
   		'Html' => 'Collective\Html\HtmlFacade',
+  		'Debugbar' => 'Barryvdh\Debugbar\Facade',
 
 	],
 
