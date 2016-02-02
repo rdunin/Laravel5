@@ -135,7 +135,11 @@ return [
 		'Illuminate\Translation\TranslationServiceProvider',
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
-
+		
+		#'Illuminate\Foundation\Providers\ArtisanServiceProvider'
+		#'Illuminate\Auth\AuthServiceProvider'
+		'Bican\Roles\RolesServiceProvider',
+		
 		/*
 		 * Application Service Providers...
 		 */
@@ -146,6 +150,8 @@ return [
 		'App\Providers\RouteServiceProvider',
 		
 		'Frozennode\Administrator\AdministratorServiceProvider',
+		
+		
 		
 		'Collective\Html\HtmlServiceProvider',
 		'Barryvdh\Debugbar\ServiceProvider',

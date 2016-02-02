@@ -1,5 +1,10 @@
 <?php namespace App\Http\Controllers;
 
+use App\Models\User;
+use Auth;
+use DB;
+use App\Models\Estate;
+
 class HomeController extends Controller {
 
 	/*
@@ -28,8 +33,35 @@ class HomeController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function index(Estate $estaetModel)
 	{
+		
+		$posts = $estaetModel->get();
+		//dd($posts[0]->title);
+		
+		$user = User::find(1);
+		
+		if ($user->is('admin')) // or you can pass an id
+		{
+		    //echo 'admin';
+		}else{
+			//echo 'no';
+		}
+		
+		//if(Auth::user()){
+			//$bd = Schema::connection('mysql2')->create('newtable', function($table) { $table->increments('id'): '1';});
+			//echo Auth::id();
+			//echo Auth::user()->email;
+			
+			
+			//$db2 = DB::connection('mysql2');
+			//$u = $db2->table('testtable')->get();
+			//print_r($u);
+			
+		//}
+		
+		//echo $user->level();
+		
 		return view('home');
 	}
 
